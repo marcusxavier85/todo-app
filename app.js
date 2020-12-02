@@ -12,14 +12,7 @@ app.engine('handlebars', expressHandlebars());
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
-app.get('/', async (request, response) => {
-    const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
-    const db = connection.db('todo-app');
-    const results = await db.collection('todo-tasks').find({}).toArray();
-    console.log(results);
-    const data = {results: results};
-    response.render('home', data);
-})
+app.get('/', tasks.displayUncompletedTasks)
 
 app.get('/completed-tasks', tasks.getCompletedTasks)
 

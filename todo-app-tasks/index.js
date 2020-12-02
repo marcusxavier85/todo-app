@@ -1,6 +1,15 @@
 const mongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
+async function displayHomepage (request, response) {
+    const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
+    const db = connection.db('todo-app');
+    const results = await db.collection('todo-tasks').find({}).toArray();
+    console.log(results);
+    const data = {results: results};
+    response.render('home', data);
+}
+
 async function getUncompletedTasks (request, response) {
     // get uncompleted tasks to display
     const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -85,6 +94,7 @@ async function setTaskToDeleted (request, response) {
     }
 }
 
+module.exports.displayUncompletedTasks = displayHomepage;
 module.exports.getUncompletedTasks = getUncompletedTasks;
 module.exports.getCompletedTasks = getCompletedTasks;
 module.exports.addNewTask = addNewTask;
