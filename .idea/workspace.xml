@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9fca3152-7130-4aa5-819c-6431b671f44d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1l0psxx8Sz7hz6MGUgSaaXwhgLK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Handlebars/Mustache" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9fca3152-7130-4aa5-819c-6431b671f44d" name="Default Changelist" comment="" />
+      <created>1606744075509</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606744075509</updated>
+      <workItem from="1606744077716" duration="4772000" />
+      <workItem from="1606751048473" duration="2674000" />
+      <workItem from="1606815450023" duration="14426000" />
+      <workItem from="1606901810102" duration="1691000" />
+      <workItem from="1606903588100" duration="5167000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="221" y="73" key="SettingsEditor" timestamp="1606820369112">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="221" y="73" key="SettingsEditor/0.23.1440.823/-1920.23.1920.1057@0.23.1440.823" timestamp="1606820369112" />
+    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup" timestamp="1606820383453">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup/0.23.1440.823/-1920.23.1920.1057@0.23.1440.823" timestamp="1606820383453" />
+  </component>
+</project>
