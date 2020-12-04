@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoClient = require('mongodb').MongoClient;
 const expressHandlebars = require('express-handlebars');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const ObjectId = require('mongodb').ObjectId;
 const tasks = require('./todo-app-tasks');
@@ -11,6 +12,9 @@ const jsonParser = bodyParser.json();
 app.engine('handlebars', expressHandlebars());
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
+
+app.use(cors({origin: '*', optionsSuccessStatus: 200}));
+app.options('*', cors({origin: '*', optionsSuccessStatus: 200}));
 
 app.get('/', tasks.displayUncompletedTasks)
 

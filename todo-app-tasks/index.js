@@ -23,7 +23,7 @@ async function getCompletedTasks (request, response) {
     // get completed tasks
     const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
     const db = connection.db('todo-app');
-    const results = await db.collection('todo-tasks').find({"completed": {$exists: true}}).toArray();
+    const results = await db.collection('todo-tasks').find({"completed": {$exists: true}, "deleted": {$exists: false}}).toArray();
     console.log(results);
     return response.json(results);
 }
@@ -61,6 +61,7 @@ async function updateTaskToCompleted (request, response) {
     // mark task as completed
     const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
     const db = connection.db('todo-app');
+    console.log(request.params.id);
     const results = await db.collection('todo-tasks').updateOne({_id: ObjectId(request.params.id)}, {$set: {completed: true}});
     if (results.modifiedCount == 1) {
         response.json({
@@ -79,6 +80,7 @@ async function setTaskToDeleted (request, response) {
     // sets task deleted key to true
     const connection = await mongoClient.connect('mongodb://root:password@localhost:27017', {useNewUrlParser: true, useUnifiedTopology: true});
     const db = connection.db('todo-app');
+    console.log(request.params.id);
     const results = await db.collection('todo-tasks').updateOne({_id: ObjectId(request.params.id)}, {$set: {deleted: true}});
     console.log(results);
     if (results.modifiedCount == 1) {
